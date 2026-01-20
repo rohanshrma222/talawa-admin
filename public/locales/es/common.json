@@ -285,5 +285,7 @@
   "attendedEventsList": "Lista de eventos asistidos",
   "linkCopied": "Enlace copiado al portapapeles",
   "copyToClipboardError": "Error al copiar el enlace al portapapeles",
-  "share": "Compartir"
+  "share": "Compartir",
+  "averageReviewScore": "Average Review Score",
+  "ratedScore": "Rated {{score}} / 5"
 }

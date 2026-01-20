@@ -6,9 +6,10 @@ import { Provider } from 'react-redux';
 import { store } from 'state/store';
 import { I18nextProvider } from 'react-i18next';
 import i18nForTest from 'utils/i18nForTest';
-import { ToastContainer } from 'react-toastify';
+import { NotificationToastContainer } from 'components/NotificationToast/NotificationToast';
 import { describe, expect, it } from 'vitest';
 import { nonEmptyProps } from '../../EventStatsMocks';
+import common from '../../../../../public/locales/en/common.json';
 
 describe('Testing Average Rating Card', () => {
   it('The component should be rendered and the Score should be shown', async () => {
@@ -16,7 +17,7 @@ describe('Testing Average Rating Card', () => {
       <BrowserRouter>
         <Provider store={store}>
           <I18nextProvider i18n={i18nForTest}>
-            <ToastContainer />
+            <NotificationToastContainer />
             <AverageRating {...nonEmptyProps} />
           </I18nextProvider>
         </Provider>
@@ -24,11 +25,13 @@ describe('Testing Average Rating Card', () => {
     );
 
     await waitFor(() =>
-      expect(queryByText('Average Review Score')).toBeInTheDocument(),
+      expect(queryByText(common.averageReviewScore)).toBeInTheDocument(),
     );
 
     await waitFor(() =>
-      expect(queryByText('Rated 5.00 / 5')).toBeInTheDocument(),
+      expect(
+        queryByText(common.ratedScore.replace('{{score}}', '5.00')),
+      ).toBeInTheDocument(),
     );
   });
 });

@@ -1,0 +1,13 @@
+@import '../../../../../style/tokens/index.css';
+
+.cardContainer {
+  width: 300px;
+}
+
+.ratingFilled {
+  color: #ff6d75;
+}
+
+.ratingHover {
+  color: #ff6d75;
+}

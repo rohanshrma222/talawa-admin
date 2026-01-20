@@ -285,5 +285,7 @@
   "attendedEventsList": "Attended events list",
   "linkCopied": "Link copied to clipboard",
   "copyToClipboardError": "Error copying link to clipboard",
-  "share": "Share"
+  "share": "Share",
+  "averageReviewScore": "Average Review Score",
+  "ratedScore": "Rated {{score}} / 5"
 }
